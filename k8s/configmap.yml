@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dc-add-issue-app-config
+data:
+  DISCORD_APP_ID: "<>"
+  DISCORD_REDIRECT: "http://localhost:8081/discord" # <-- IMPORTANT: Update this to your public URL
+  GITHUB_CLIENT_ID: "<>"
+  GITHUB_REDIRECT: "http://localhost:8081/github" # <-- IMPORTANT: Update this to your public URL
+  GITHUB_ISSUE_REPO: "<>"
+  GITHUB_ORG: "<>"
+  GITHUB_PROJECT_GLOBAL_ID: "<>"
+  GITHUB_PROJECT_STATUS_FIELD_ID: "<>"
+  GITHUB_PROJECT_GROUP_CHOICES: "<name>:id;<name>:id;..."

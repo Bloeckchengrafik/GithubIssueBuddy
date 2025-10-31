@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dc-add-issue-app-deployment
+  labels:
+    app: dc-add-issue-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dc-add-issue-app
+  template:
+    metadata:
+      labels:
+        app: dc-add-issue-app
+    spec:
+      containers:
+        - name: dc-add-issue-app
+          image: ghcr.io/Bloeckchengrafik/GithubIssueBuddy:latest
+          ports:
+            - containerPort: 8081
+          envFrom:
+            - configMapRef:
+                name: dc-add-issue-app-config
+            - secretRef:
+                name: dc-add-issue-app-secrets
