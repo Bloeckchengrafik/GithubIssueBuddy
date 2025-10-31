@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: dc-add-issue-app
-          image: ghcr.io/Bloeckchengrafik/GithubIssueBuddy:latest
+          image: ghcr.io/Bloeckchengrafik/githubissuebuddy:latest
           ports:
             - containerPort: 8081
           envFrom:
